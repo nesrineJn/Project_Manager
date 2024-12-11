@@ -3,20 +3,24 @@ package com.examen;
 
 public class Project {
     private int id;
-    private String name;
+    private String libelle;
     private String startDate;
     private String endDate;
     private int totalTasks;
     private double cost;
+    private String type;
+    private String Superviseur ;
 
 
-    public Project(int id, String name, String startDate, String endDate, int totalTasks, double cost) {
+    public Project(int id, String name, String startDate, String endDate, int totalTasks, double cost, String type, String Superviseur) {
         this.id = id;
-        this.name = name;
+        this.libelle = name;
         this.startDate = startDate;
         this.endDate = endDate;
         this.totalTasks = totalTasks;
         this.cost = cost;
+        this.type = type;
+        this.Superviseur = Superviseur;
     }
 
   
@@ -29,11 +33,11 @@ public class Project {
     }
 
     public String getName() {
-        return name;
+        return libelle;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.libelle = libelle;
     }
 
     public String getStartDate() {
@@ -67,16 +71,34 @@ public class Project {
     public void setCost(double cost) {
         this.cost = cost;
     }
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
+    }
+    public String getSuperviseur() {
+        return Superviseur;
+    }
+    public void setSuperviseur(String Superviseur) {
+        this.Superviseur = Superviseur;
+    }
 
     @Override
     public String toString() {
         return "Project{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", name='" + libelle + '\'' +
                 ", startDate='" + startDate + '\'' +
                 ", endDate='" + endDate + '\'' +
                 ", totalTasks=" + totalTasks +
                 ", cost=" + cost +
                 '}';
     }
+
+
+	public void createProject() {
+		// TODO Auto-generated method stub
+		System.out.println("Project created");
+	}
 }
